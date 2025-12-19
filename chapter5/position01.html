@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        div {
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .parent {
+            position: relative;
+            /* สำคัญ! */
+            width: 100%;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: red;
+
+        }
+
+        .box2 {
+            background-color: green;
+
+        }
+
+        .box3 {
+            background-color: blue;
+
+        }
+
+        .box {
+            position: static;
+            top: 200px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box1">Box 1 (absolute)</div>
+        <div class="box2">Box 2 (absolute)</div>
+        <div class="box3">Box 3 (absolute)</div>
+    </div>
+
+
+</body>
+
+</html>
