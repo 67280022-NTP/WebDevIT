@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery by Natthaphat 67280022</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Media Gallery</h1>
+</header>
+
+<section>
+    <h2>วิดีโอ</h2>
+    <video controls>
+        <source src="sample-video.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section>
+    <h2>เสียง</h2>
+    <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<section>
+    <h2>รูปภาพ</h2>
+    <div class="gallery">
+
+        <img
+            src="1280.jpg"
+            srcset="
+                640.jpg 640w,
+                1280.jpg 1280w,
+                1920.jpg 1920w
+            "
+            sizes="(max-width: 768px) 640px,
+                   (max-width: 1366px) 1280px,
+                   1920px"
+            alt="Dog">
+
+        <picture>
+            <source media="(max-width: 768px)" srcset="portrait.jpg">
+            <source media="(min-width: 769px)" srcset="landscape.jpg">
+            <img src="default.jpg" alt="รูปภาพ">
+        </picture>
+
+    </div>
+</section>
+
+</body>
+</html>
