@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>House Listing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h2 class="title">🏠 รายการประกาศขายบ้านล่าสุด</h2>
+
+<div class="carousel-wrapper">
+  <button class="nav prev" onclick="scrollCarousel(-1)">‹</button>
+
+  <div class="listing-container" id="carousel">
+
+    <div class="house-card" onclick="openModal(
+      'บ้านเดี่ยว',
+      '฿ 5,900,000',
+      'หมู่บ้านสีเพลส, บางนา',
+      '3 ห้องนอน, 3 ห้องน้ำ, 2 ที่จอดรถ',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994'
+    )">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+      <p class="price">฿ 5,900,000</p>
+      <p class="location">บางนา</p>
+    </div>
+
+    <div class="house-card" onclick="openModal(
+      'ทาวน์โฮม',
+      '฿ 3,250,000',
+      'พลีโน่, รามอินทรา',
+      '2 ห้องนอน, 2 ห้องน้ำ, 1 ที่จอดรถ',
+      'https://images.unsplash.com/photo-1572120360610-d971b9d7767c'
+    )">
+      <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c">
+      <p class="price">฿ 3,250,000</p>
+      <p class="location">รามอินทรา</p>
+    </div>
+
+    <div class="house-card" onclick="openModal(
+      'คอนโด',
+      '฿ 2,890,000',
+      'ไอดีโอ พระราม 9',
+      '1 ห้องนอน, 35 ตร.ม.',
+      'https://images.unsplash.com/photo-1502673530728-f79b4cab31b1'
+    )">
+      <img src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1">
+      <p class="price">฿ 2,890,000</p>
+      <p class="location">พระราม 9</p>
+    </div>
+
+    <!-- เพิ่มการ์ดอื่นได้เหมือนเดิม -->
+
+  </div>
+
+  <button class="nav next" onclick="scrollCarousel(1)">›</button>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <img id="modal-img">
+    <h3 id="modal-title"></h3>
+    <p id="modal-price"></p>
+    <p id="modal-location"></p>
+    <p id="modal-detail"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

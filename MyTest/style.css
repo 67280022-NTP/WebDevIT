@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.listing-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.house-card {
+  min-width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.house-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.price {
+  font-weight: bold;
+  padding: 8px;
+}
+
+.location {
+  padding: 0 8px 12px;
+  color: #555;
+}
+
+/* ปุ่มเลื่อน */
+.nav {
+  position: absolute;
+  top: 40%;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+  .house-card {
+    min-width: 200px;
+  }
+}
